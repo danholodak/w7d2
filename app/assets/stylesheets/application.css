@@ -13,3 +13,38 @@
  *= require_tree .
  *= require_self
  */
+h1 {
+    font-size: 60px;
+    height: 100px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-family: cursive;
+    background-color: mediumturquoise;
+}
+#login, #logout {
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+a {
+    border: 2px solid black;
+    background-color: white;
+    text-decoration: none;
+    width: fit-content;
+    
+}
+body{
+    background-color: aliceblue;
+}
+
+#error{
+    color:orangered;
+}
+#info{
+    display: flex;
+    justify-content: center;
+    background-color: cornsilk;
+
+}

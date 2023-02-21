@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 
     def show
+        @user = User.find_by(id: params[:id])
         render :show
     end
 
@@ -12,7 +13,7 @@ class UsersController < ApplicationController
     def create
         @user = User.create(strong_params)
         if @user.save
-            render user_url(@user)
+            redirect_to user_url(@user)
         else
             flash.now[:errors] = @user.errors.full_messages
             render :new

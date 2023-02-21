@@ -1,0 +1,19 @@
+<h2>Sign Up Page</h2>
+<form action="<%=users_url%>" method="POST">
+<%=auth_token%>
+<%if flash[:errors]%>
+    <ul>
+        <%flash[:errors].each do |error|%>
+            <li id="error"><%=error%></li>
+        <%end%>
+    </ul>
+<%end%>
+<label for="email">Enter e-mail address:<label>
+<input id="email" type="text" name="user[email]" value="<%=@user.email%>">
+
+<label for="pw">Enter password:<label>
+<input id="pw" type="password" name="user[password]" value="">
+
+<input type="submit"  value="JOIN US!!!!!!!!">
+
+</form>

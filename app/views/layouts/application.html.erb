@@ -10,6 +10,24 @@
   </head>
 
   <body>
+  <h1>It's Music?</h1>
+
+  <% if logged_in? %>
+  <!-- log out button-->
+  <div id="login">
+    <form action="<%=session_url%>" method="POST">
+      <%= auth_token %>
+      <input type="hidden" name="_method" value="delete">
+      <input type="submit" value="Log Out">
+    </form>
+  </div>
+  
+  <%else%>
+  <!-- log in and sign up-->
+  <div id="login">
+    <a  href="<%=new_session_url%>">Log In</a><a href="<%=new_user_url%>">Sign Up</a>
+  </div>
+  <%end%>
     <%= yield %>
   </body>
 </html>
